@@ -4,7 +4,9 @@ import aiohttp_jinja2
 
 
 def setup_routes(application) -> None:
-    pass
+    from app.forum.routes import setup_routes\
+        as setup_forum_routes
+    setup_forum_routes(application)
 
 
 def setup_external_libraries(
